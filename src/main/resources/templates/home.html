@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<ul>
+    <li th:each="user: ${users}">
+        <a   th:href="'/todos?userId='+${user.id}"  >  <p th:text="${user.name}"></p> </a>
+    </li>
+</ul>
+
+</body>
+</html>
